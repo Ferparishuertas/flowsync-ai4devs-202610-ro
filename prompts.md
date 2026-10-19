@@ -19,17 +19,56 @@ distinto, y sin este archivo no se distinguen.
 Borra el ejemplo de abajo cuando escribas el primero.
 
 ---
+Con Harness
+---
 
 ## Prompt 1
 
-**Modelo:** Opus 1M xHigh
+**Modelo:** Sonnet 5.5 Medium
 **Herramienta:** Claude Code
 
 ```
-Este es el ejemplo. Bórralo.
+/priority-ticket
 
-El prompt va aquí dentro, entero y con sus saltos de línea,
-para que se sepa dónde empieza y dónde acaba.
 ```
 
-**Qué salió:** (opcional, una línea) funcionó a la primera / tuve que insistir / me inventó una ruta que no existe.
+## Prompt 2
+
+**Modelo:** Sonnet 5.5 Medium
+**Herramienta:** Claude Code
+
+```
+adelante con passwordConfirmation y todo el plan
+
+```
+
+
+---
+Sin Harness
+---
+
+## Prompt 1
+
+```Traiee el ticket de jira de mayor prioridad, resume los criterios que vas aplicar y entra en plan mode para implementarlo.
+```
+
+## Prompt 2
+
+```
+passwordConfirmation tiene que ser parte de los cirterios de aceptacion ya que tienen que coincidir.
+Ademas el Backend ya esta hecho, no hay que tocarlo
+No veo prettier como formato
+```
+
+## Prompt 3
+
+```
+adelante
+```
+
+
+## Prompt 4
+
+```
+pruebalo
+```
