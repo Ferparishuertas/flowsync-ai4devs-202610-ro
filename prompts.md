@@ -43,7 +43,8 @@ adelante con passwordConfirmation y todo el plan
 ```
 
 ## Prompt 3
-
+**Modelo:** Sonnet 5.5 Medium
+**Herramienta:** Claude Code
 ```
 pruebalo con navegador incluido
 ```
@@ -54,11 +55,14 @@ Sin Harness
 ---
 
 ## Prompt 1
-
+**Modelo:** Sonnet 5.5 Medium
+**Herramienta:** Claude Code
 ```Traiee el ticket de jira de mayor prioridad, resume los criterios que vas aplicar y entra en plan mode para implementarlo.
 ```
 
 ## Prompt 2
+**Modelo:** Sonnet 5.5 Medium
+**Herramienta:** Claude Code
 
 ```
 passwordConfirmation tiene que ser parte de los cirterios de aceptacion ya que tienen que coincidir.
@@ -67,6 +71,8 @@ No veo prettier como formato
 ```
 
 ## Prompt 3
+**Modelo:** Sonnet 5.5 Medium
+**Herramienta:** Claude Code
 
 ```
 adelante
@@ -74,12 +80,16 @@ adelante
 
 
 ## Prompt 4
+**Modelo:** Sonnet 5.5 Medium
+**Herramienta:** Claude Code
 
 ```
 pruebalo
 ```
 
 ## Prompt 5
+**Modelo:** Sonnet 5.5 Medium
+**Herramienta:** Claude Code
 
 ```
 pruebalo con navegador incluido
