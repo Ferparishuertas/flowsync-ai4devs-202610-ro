@@ -2,8 +2,6 @@
 
 Mismo encargo en las dos copias. Con harness: `flowsync-ai4devs-202610-ro` (`/priority-ticket`, CLAUDE.md, subagente). Sin harness: `flowsync-ai4devs-202610-ro-clean` (misma instrucción escrita a mano). Los prompts exactos están en `prompts.md`.
 
-> Aviso: el README pedía **no aplicar** el plan; en las dos copias se aplicó tras el plan. Lo que se compara en las casillas 1 y 2 es el **plan**; el estado final (casilla 4) se midió sobre el código ya aplicado.
-
 | | Con harness | Sin harness |
 |---|---|---|
 | **1. Archivos que propone tocar** | **17** nombrados en el plan (vite.config.ts, tsconfig.app.json, components.json, 5 `ui/*`, `lib/api.ts`, `auth/AuthContext.tsx`, `auth/ProtectedRoute.tsx`, 3 páginas, App.tsx, main.tsx, borrar App.css) + package.json implícito. Resultado real: 23 en el commit (incluye lockfile). | **22** listados (package.json, vite.config.ts, tsconfig.json, tsconfig.app.json, components.json, main.tsx, App.tsx, index.css, `lib/{api,auth,utils}`, 5 `ui/*`, 3 páginas, `.prettierrc`, `.prettierignore`, borrar App.css). Resultado real: 20 archivos sin contar lockfiles. |
@@ -13,14 +11,14 @@ Mismo encargo en las dos copias. Con harness: `flowsync-ai4devs-202610-ro` (`/pr
 
 
 
-Qué piezas montaste y cuál te costó más de lo que esperabas.
+1. **Hasta qué pieza llegaste, y cuál te costó más de lo que esperabas.**
 
-- Fue todo bastante fluido
+- Fue todo bastante fluido. 13 minutos con harness ya que revise el plan, y 26 sin harness
 
-La primera diferencia que viste entre las dos salidas, y en qué te fijaste para verla. Ojo, no cuál fue mejor: qué salió distinto, concretamente, y dónde estabas mirando cuando lo notaste. Si tuviste que abrir un archivo para verlo, dilo.
+2. **La primera diferencia que viste entre las dos salidas, y en qué te fijaste para verla.**
 
-- Sin harness tuve que intervenir para dar direccion de las cosas que no estban especificadas pero son convenciones habituales.
+- Sin harness tuve que intervenir para dar direccion de las cosas que no estban especificadas pero son convenciones habituales, prettier, y el passwordConfirmation
 
-Algo que dejaste escrito en el harness y que el agente no cumplió igualmente
+3. **Algo que dejaste escrito en el harness y que el agente no cumplió igualmente.**
 
-- no se ejecuto el adversarial-reviewer con la creacion del PR, con harness
+- no se ejecuto el adversarial-reviewer con la creacion del PR que hice en mi repor para probar. Lo tuve que hacer a mano, y No se hicieron pruebas en el navegador

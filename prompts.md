@@ -42,6 +42,12 @@ adelante con passwordConfirmation y todo el plan
 
 ```
 
+## Prompt 3
+
+```
+pruebalo con navegador incluido
+```
+
 
 ---
 Sin Harness
@@ -71,4 +77,10 @@ adelante
 
 ```
 pruebalo
+```
+
+## Prompt 5
+
+```
+pruebalo con navegador incluido
 ```
