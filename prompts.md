@@ -22,14 +22,91 @@ Borra el ejemplo de abajo cuando escribas el primero.
 
 ## Prompt 1
 
-**Modelo:** Opus 1M xHigh
+**Modelo:** Sonnet 5.5
 **Herramienta:** Claude Code
 
 ```
-Este es el ejemplo. Bórralo.
-
-El prompt va aquí dentro, entero y con sus saltos de línea,
-para que se sepa dónde empieza y dónde acaba.
+Escribeme un resumem de las funcionalidades, capacidades del proyecto, el modelo de datos y todo lo funcional del este repo
 ```
 
-**Qué salió:** (opcional, una línea) funcionó a la primera / tuve que insistir / me inventó una ruta que no existe.
+**Qué salió:** Resumen correcto del terreno existente (solo auth).
+
+## Prompt 2
+
+**Modelo:** Sonnet 5.5
+**Herramienta:** Claude Code
+
+```
+sEta es la base de mi PRD. "Quiero que FlowSync sea una herramienta para que los equipos remotos sepan en qué está trabajando cada uno sin tener que hacer reuniones de sincronización. Algo tipo tareas compartidas pero más en tiempo real y menos rollo que Jira."
+
+Hazme las  cinco preguntas que más reducirían la incertidumbre sobre el problema, los usuarios y el alcance
+No puedes bajar al modelo de datos o al detalle  los endpoints
+```
+
+**Qué salió:** Cinco preguntas en una sola ronda, sin bajar a datos ni endpoints.
+
+## Prompt 3
+
+**Modelo:** Sonnet 5.5
+**Herramienta:** Claude Code
+
+```
+porque me lo vas a poner en cinco bloques?
+```
+
+**Qué salió:** La IA se había adelantado al formato sin que se lo pidiera.
+
+## Prompt 4
+
+**Modelo:** Sonnet 5.5
+**Herramienta:** Claude Code
+
+```
+Aqui tienes las respuestas
+
+[ficha de hechos del README, pegada entera]
+```
+
+**Qué salió:** Propuso un alcance con 8 cosas y detectó tensiones.
+
+## Prompt 5
+
+**Modelo:** Sonnet 5.5
+**Herramienta:** Claude Code
+
+```
+Quiero que lo estructures en formato 
+
+ Problema · usuarios · propuesta de valor · alcance · NO-alcance
+
+y que justifiques cada ecvlusion, no alcance
+```
+
+**Qué salió:** Cinco bloques con 12 exclusiones justificadas.
+
+## Prompt 6
+
+**Modelo:** Sonnet 5.5
+**Herramienta:** Claude Code
+
+```
+el requistio 8 ponlo en no alcance
+el responsbale es opcional , y el estado inicial es por defecto
+El equipo esta en no alcance. Una vez creas la cuentas ya ves todo por ahora
+```
+
+**Qué salió:** Recorte mío: el resumen de «qué se ha movido» pasó al NO-alcance.
+
+## Prompt 7
+
+**Modelo:** Sonnet 5.5
+**Herramienta:** Claude Code
+
+```
+2,3 y 5 ok
+1 queria deci rque quite obligatoriedad
+El equipo jerraquias es otra funcionalidad
+Estados, hay que definir 3 minimo, Por hacer en progreso y hecho
+```
+
+**Qué salió:** Corrigió las incoherencias que señaló el revisor adversarial.

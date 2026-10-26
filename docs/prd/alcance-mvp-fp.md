@@ -21,11 +21,11 @@ Quien actualiza cobra en el momento: esa lista es su cola de trabajo y deja de r
 - **Éxito a una semana de uso real:** el equipo cancela la ronda de «¿en qué estás?» y nadie pide que vuelva.
 - **Riesgo nº 1 a validar:** si la información se queda vieja, el producto pierde el sentido. La mitigación es que actualizar cueste dos clics, no obligar a nadie.
 
-## 4. Alcance (7 cosas)
+## 4. Alcance (7 cosas: la cuenta, que ya existe, y 6 nuevas)
 1. Cuenta e inicio de sesión (ya existe). Al crear la cuenta se accede a todo el espacio.
 2. Una única lista de tareas compartida por todo el equipo.
-3. Crear una tarea con solo el título. El responsable es opcional, y se puede asignar o cambiar después. El estado inicial es el que se asigna por defecto.
-4. Cambiar el estado de una tarea en dos clics.
+3. Crear una tarea con solo el título. El responsable no es obligatorio, y se puede asignar o cambiar después. El estado inicial es «Por hacer», sin elegirlo.
+4. Cambiar el estado de una tarea en dos clics. Hay tres estados fijos: «Por hacer», «En progreso» y «Hecho».
 5. Fecha de vencimiento, con las vencidas marcadas.
 6. Filtrar por estado para centrarse en lo pendiente.
 7. Ver los cambios de estado sin refrescar la página.
@@ -37,9 +37,9 @@ Cada exclusión lleva la hipótesis que no ayuda a validar.
 1. **Resumen de «qué se ha movido desde la última vez que miraste».**
    - **No valida:** que el tiempo real por sí solo basta para no solaparse con otra persona.
    - **Por qué:** exige recordar cuándo miró cada persona y decidir qué cuenta como cambio. Es una capa de producto encima de la lista. Si el equipo mantiene el estado al día, la lista ya responde a «qué está libre».
-2. **Entidad «equipo», invitaciones y gestión de acceso.**
-   - **No valida:** que un equipo deja de hacer la ronda. Eso se prueba con un único espacio.
-   - **Por qué:** añade modelo y flujos sin tocar la hipótesis. Queda como supuesto: quien crea una cuenta ve todo.
+2. **Entidad «equipo», jerarquías, invitaciones y gestión de acceso.**
+   - **No valida:** que la lista compartida evita solaparse con otra persona. Eso se prueba con un único espacio abierto.
+   - **Por qué:** es otra funcionalidad, con su propio modelo y flujos, y no toca la hipótesis. Queda como supuesto: quien crea una cuenta ve todo.
 3. **Varios equipos o gente en más de uno.**
    - **No valida:** que un solo equipo deja de hacer la ronda.
    - **Por qué:** multi-equipo añade modelo y permisos sin tocar la hipótesis.
@@ -48,7 +48,7 @@ Cada exclusión lleva la hipótesis que no ayuda a validar.
    - **Por qué:** la hipótesis es frescura de la tarea, no actividad de la persona. Un indicador de presencia es vigilancia, y se rechaza a propósito.
 5. **Notificaciones push.**
    - **No valida:** que ver la lista basta. Un aviso interrumpe, y eso reproduce el problema original.
-   - **Por qué:** el caso de uso es «llego por la mañana y veo qué se ha movido», no «me avisan».
+   - **Por qué:** el estado se consulta cuando uno abre la lista, no se empuja a nadie. Quien vuelve de una reunión mira la lista y ve el estado actual de cada tarea.
 6. **Integración con Slack.**
    - **No valida:** nada del núcleo, que es el estado tecleado en segundos.
    - **Por qué:** añade OAuth de terceros y un canal de interrupción, igual que las push.
@@ -80,11 +80,10 @@ Cada exclusión lleva la hipótesis que no ayuda a validar.
 ---
 
 ## Las tres líneas (Parte B)
-1. **Los dos números:** la IA propuso 8 cosas dentro del alcance; tras el recorte quedan 7.
-2. **Tres cosas que dejé fuera y por qué:** 
-He dejado fuera Ver qué se ha movido desde la última vez que miraste, ya que se puede hacer mas adelante, y con el última estado vale. 
-He quitado que el responsable sea opcional.
-Y el equipo no esta en alcance
-3. **La exclusión de la que menos seguro estoy:** 
-Creo que lo que se ha movido puede ser una funcionalidad interesante.
+1. **Los dos números:** la IA propuso 8 cosas dentro del alcance; tras el recorte quedan 7. De las 7, una es la cuenta que ya existía.
+2. **Tres cosas que dejé fuera y por qué:**
+   - **Ver qué se ha movido desde la última vez que miraste.** No ayuda a validar que ver el estado actual basta para no solaparse: con el último estado de cada tarea vale.
+   - **Que el responsable sea obligatorio.** Lo quité para que crear una tarea cueste segundos. Además, una tarea sin responsable es una tarea libre, que es información útil.
+   - **El equipo y las jerarquías.** Son otra funcionalidad y no ayudan a validar que la lista compartida evita solaparse.
+3. **La exclusión de la que menos seguro estoy:** ver qué se ha movido. Creo que puede ser una funcionalidad interesante. Se contradicen lo que cuesta construirlo (recordar cuándo miró cada persona) y lo que valida (que no hace falta mirar la lista de forma continua). Entraría si, tras una semana de uso, el equipo sigue preguntando «¿qué ha cambiado?» aunque el estado esté al día.
 
